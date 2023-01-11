@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#262D2E">
+
+    <RatingBar
+        android:id="@+id/rbRatingBar"
+        style="@android:style/Widget.DeviceDefault.Light.RatingBar.Indicator"
+        android:layout_width="183dp"
+        android:layout_height="37dp"
+        android:layout_marginBottom="32dp"
+        android:isIndicator="false"
+        android:numStars="5"
+        android:progressTint="#FF77898C"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/ivImage"
+        android:layout_width="237dp"
+        android:layout_height="233dp"
+        android:layout_marginTop="40dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/tvDescription"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:textColor="#D3FFFFFF"
+        app:layout_constraintEnd_toEndOf="@+id/cbDLike"
+        app:layout_constraintStart_toStartOf="@+id/tvDSinger"
+        app:layout_constraintTop_toBottomOf="@+id/tvDSinger" />
+
+    <CheckBox
+        android:id="@+id/cbDLike"
+        style="@style/CustomCheckBoxTheme"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:buttonTint="#DAE63946"
+        android:checked="false"
+        app:layout_constraintBottom_toBottomOf="@+id/tvDSinger"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tvDName" />
+
+    <TextView
+        android:id="@+id/tvDName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:text="TextView"
+        android:textColor="@color/white2"
+        android:textSize="22sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivImage" />
+
+    <TextView
+        android:id="@+id/tvDSinger"
+        android:layout_width="226dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="TextView"
+        android:textColor="@color/white2"
+        app:layout_constraintStart_toStartOf="@+id/tvDName"
+        app:layout_constraintTop_toBottomOf="@+id/tvDName" />
+
+    <ImageButton
+        android:id="@+id/ibVideo"
+        android:layout_width="33dp"
+        android:layout_height="27dp"
+        android:layout_marginTop="16dp"
+        android:alpha="0.85"
+        android:background="#00FFFFFF"
+        android:scaleType="fitCenter"
+        app:layout_constraintStart_toStartOf="@+id/tvDescription"
+        app:layout_constraintTop_toBottomOf="@+id/tvDescription"
+        app:srcCompat="@drawable/video" />
+
+    <TextView
+        android:id="@+id/tvVideo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:clickable="true"
+        android:text="Click here to view the video"
+        android:textAllCaps="false"
+        android:textColor="@color/white2"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/ibVideo"
+        app:layout_constraintStart_toEndOf="@+id/ibVideo"
+        app:layout_constraintTop_toTopOf="@+id/ibVideo" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
